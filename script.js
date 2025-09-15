@@ -47,5 +47,4 @@ function showError() {
   emailSpan.classList.add('error')
   emailSpan.classList.remove('hidden')
   emailInput.classList.add('input-error')
-  emailInput.p
 }

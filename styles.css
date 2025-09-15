@@ -8,6 +8,7 @@
   --white: hsl(0, 0%, 100%);
   --orange: hsl(15, 100%, 61%);
   --orange-red: hsl(346, 100%, 66%);
+  --light-orange: #ffe7e6;
 
   /* typography */
   --sans-serif: 'Roboto', sans-serif;
@@ -61,7 +62,7 @@ ul {
 }
 li {
   background: url('/assets/images/icon-list.svg') no-repeat left top;
-  padding-left: var(--spacing-400);
+  padding-inline-start: var(--spacing-400);
   padding-block-end: 0.275rem;
   margin-block-end: var(--spacing-100);
   line-height: var(--text-preset-2-line-height);
@@ -127,7 +128,7 @@ input {
 }
 .input-error {
   border: 1px solid var(--red);
-  background-color: #ffe7e6;
+  background-color: var(--light-orange);
 }
 /* Success message styles */
 .success-content {
