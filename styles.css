@@ -119,6 +119,10 @@ input {
 .hero-image {
   order: 1;
 }
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
 .hidden {
   display: none;
 }
@@ -156,16 +160,13 @@ input {
   margin-inline: auto;
   transition: all 0.2s ease;
 }
+/* End of success message styles */
 @media (min-width: 23.5rem) {
   .card {
-    max-width: 100%;
     max-width: 35rem;
-    margin: var(--spacing-400);
+    margin: var(--spacing-400) auto;
     border-radius: var(--spacing-100);
     padding: var(--spacing-200);
-  }
-  .hero-image img {
-    width: 100%;
   }
   .success-content {
     width: 80%;
@@ -183,8 +184,7 @@ input {
     padding: var(--spacing-600);
   }
   .card {
-    max-width: 62.5rem;
-    width: 50rem;
+    max-width: 50rem;
     margin-inline: auto;
     border-radius: var(--spacing-200);
     flex-direction: row;
@@ -194,6 +194,7 @@ input {
   }
   .hero-image img {
     height: 100%;
+    object-fit: cover;
   }
   .form-wrapper {
     order: 1;
