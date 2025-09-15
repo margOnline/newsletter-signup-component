@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/script.js"></script>
+  <title>
+    Frontend Mentor | Newsletter sign-up form with success message
+  </title>
+
+  </style>
+</head>
+
+<body>
+  <!-- Sign-up form start -->
+  <main>
+    <div class="card">
+      <section class="form-wrapper">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates area success</li>
+          <li> And much more!</li>
+        </ul>
+        <form novalidate>
+          <div class="label-wrapper">
+            <label for="email">Email address</label>
+            <span class="error-message hidden"></span>
+          </div>
+          <input type="email" placeholder="email@company.com" name="email" required>
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </section>
+      <section class="hero-image">
+        <picture>
+          <source srcset="/assets/images/illustration-sign-up-mobile.svg" media="(max-width: 375px)" />
+          <source srcset="/assets/images/illustration-sign-up-tablet.svg"
+            media="((min-width: 376px) and (max-width: 767px))" />
+          <source srcset="/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 768px)" />
+          <img src="/assets/images/illustration-sign-up-mobile.svg"
+            alt="Sign up form illustration on an orange and pink gradient background" />
+        </picture>
+      </section>
+    </div>
+    <!-- Success message start -->
+    <div class="success-card hidden">
+      <div class="success-content">
+        <img src="/assets/images/icon-success.svg" alt="checkmark">
+        <h2>Thanks for subscribing!</h2>
+        <p>A confirmation email has been sent to <strong></strong>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button>Dismiss message</button>
+      </div>
+    </div>
+  </main>
+
+
+</body>
+
+</html>
