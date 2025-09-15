@@ -145,8 +145,9 @@ input {
   margin-block: var(--spacing-400);
 }
 .success-content img {
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  max-width: 4rem;
+  height: auto;
 }
 .success-content > p {
   margin-block-end: var(--spacing-1300);
@@ -155,10 +156,10 @@ input {
   margin-inline: auto;
   transition: all 0.2s ease;
 }
-@media (min-width: 376px) {
+@media (min-width: 23.5rem) {
   .card {
     max-width: 100%;
-    max-width: 560px;
+    max-width: 35rem;
     margin: var(--spacing-400);
     border-radius: var(--spacing-100);
     padding: var(--spacing-200);
@@ -177,12 +178,13 @@ input {
     margin-block-end: var(--spacing-400);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   main {
     padding: var(--spacing-600);
   }
   .card {
-    width: 768px;
+    max-width: 62.5rem;
+    width: 50rem;
     margin-inline: auto;
     border-radius: var(--spacing-200);
     flex-direction: row;

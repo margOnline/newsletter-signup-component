@@ -4,11 +4,13 @@ const successMessage = document.querySelector('.success-card')
 const closeMessageButton = document.querySelector('.success-content button')
 const signUpCard = document.querySelector('.card')
 const errorMessageSpan = form.querySelector('span')
+const messageEmailContent = successMessage.querySelector('p strong')
 
 form.addEventListener('submit', handleSubmit)
 closeMessageButton.addEventListener('click', () => closeSuccessMessage())
 inputField.addEventListener('input', () => {
   errorMessageSpan.classList.add('hidden')
+  inputField.classList.remove('input-error')
 })
 
 function handleSubmit(event) {
@@ -28,7 +30,6 @@ function isValid(formInput) {
 }
 
 function showSuccessMessage(email) {
-  const messageEmailContent = successMessage.querySelector('p strong')
   messageEmailContent.textContent = email
   signUpCard.classList.add('hidden')
   successMessage.classList.remove('hidden')
@@ -38,13 +39,12 @@ function closeSuccessMessage() {
   successMessage.classList.add('hidden')
   signUpCard.classList.remove('hidden')
   signUpCard.querySelector('form input').value = ''
+  inputField.classList.remove('input-error')
 }
 
 function showError() {
-  const emailInput = signUpCard.querySelector('form input')
-  const emailSpan = signUpCard.querySelector('form span')
-  emailSpan.textContent = 'Valid email required'
-  emailSpan.classList.add('error')
-  emailSpan.classList.remove('hidden')
-  emailInput.classList.add('input-error')
+  errorMessageSpan.textContent = 'Valid email required'
+  errorMessageSpan.classList.add('error')
+  errorMessageSpan.classList.remove('hidden')
+  inputField.classList.add('input-error')
 }
